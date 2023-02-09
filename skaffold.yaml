@@ -1,0 +1,37 @@
+apiVersion: skaffold/v2alpha3
+kind: Config
+deploy:
+  kubectl:
+    manifests:
+      - ./infra/k8s/*
+#    remoteManifests:
+#      - https://github.com/rabbitmq/cluster-operator/releases/latest/download/cluster-operator.yml
+build:
+  local:
+    push: false
+  artifacts:
+    - image: @nericoder/learning-rabbitmq/front
+      context: front
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: 'src/**/*.js'
+            dest: .
+    - image: @nericoder/learning-rabbitmq/backend
+      context: backend
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: 'src/**/*.js'
+            dest: .
+
+    - image: @nericoder/learning-rabbitmq/rabbitmq
+      context: tickets
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: 'src/**/*.js'
+            dest: .
