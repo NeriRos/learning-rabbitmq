@@ -15,6 +15,29 @@ function addDomain() {
   fi
 }
 
+function installHelm() {
+  if command -v helm; then
+    echo "Helm is already installed"
+  else
+    echo "Installing Helm"
+    curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+    chmod 700 get_helm.sh
+    ./get_helm.sh
+    rm ./get_helm.sh
+  fi
+}
+
+function installIngressNginx() {
+  if kubectl get namespaces | grep ingress-nginx -q; then
+    echo "Ingress Nginx is already installed"
+  else
+    echo "Installing Ingress Nginx"
+    helm upgrade --install ingress-nginx ingress-nginx \
+      --repo https://kubernetes.github.io/ingress-nginx \
+      --namespace ingress-nginx --create-namespace
+  fi
+}
+
 function installKrew() {
   if kubectl krew | grep -q error; then
     echo "Installing Krew"
@@ -59,6 +82,8 @@ if [ $# -eq 0 ]; then
 fi
 
 if [ "$1" = "install" ]; then
+  installHelm
+  installIngressNginx
   installKrew
   installRabbitMQCommandLine
   installClusterOperator

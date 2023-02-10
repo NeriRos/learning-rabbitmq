@@ -2,9 +2,8 @@
 
 ## Deployment
 
-- Deploy a RabbitMQ Container `docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672
-  rabbitmq:3.
-  11-management`
+- execute `./infra/init.sh install`
+- execute `./infra/init.sh init <domain_for_testing>`
 
 ## The project
 
@@ -20,6 +19,7 @@ The goal is to experiment with RabbitMQ and Kubernetes.
 6. Add `RabbitMQ Cluster Operator` to `skaffold`
 7. Write script to open RabbitMQ management ui
 8. Install RabbitMQ amqp protocol for javascript `amqplib`
+9. Write an Init file to install required prerequisites and define settings
 
 ### Commands and resources
 

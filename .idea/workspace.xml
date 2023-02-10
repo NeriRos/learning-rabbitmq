@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4473be6f-0db8-4da4-b170-47c074e18193" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/infra/init.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/infra/rabbitmq/connect-application-test.sh" afterDir="false" />
+    <list default="true" id="4473be6f-0db8-4da4-b170-47c074e18193" name="Changes" comment="improve script and add local domain automation">
+      <change afterPath="$PROJECT_DIR$/infra/k8s/ingress-depl.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infra/rabbitmq-management-ui.sh" beforeDir="false" afterPath="$PROJECT_DIR$/infra/rabbitmq/rabbitmq-management-ui.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skaffold.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/skaffold.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/publisher/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/publisher/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infra/init.sh" beforeDir="false" afterPath="$PROJECT_DIR$/infra/init.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infra/rabbitmq/rabbitmq-management-ui.sh" beforeDir="false" afterPath="$PROJECT_DIR$/infra/rabbitmq/rabbitmq-management-ui.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +56,7 @@
     "WebServerToolWindowFactoryState": "false",
     "com.google.cloudcode.ide_session_index": "20230210_0001",
     "deletionFromPopupRequiresConfirmation": "false",
-    "last_opened_file_path": "/Users/neri/WebstormProjects/rabbitmq-learning/infra/k8s",
+    "last_opened_file_path": "/Users/neri/WebstormProjects/rabbitmq-learning/infra",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -68,6 +68,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/infra" />
       <recent name="$PROJECT_DIR$/infra/k8s" />
       <recent name="$PROJECT_DIR$/backend" />
       <recent name="$PROJECT_DIR$/front" />
@@ -91,7 +92,7 @@
       <workItem from="1675946906016" duration="879000" />
       <workItem from="1675948238479" duration="2428000" />
       <workItem from="1675952617725" duration="10268000" />
-      <workItem from="1676018817591" duration="1991000" />
+      <workItem from="1676018817591" duration="6173000" />
     </task>
     <task id="LOCAL-00001" summary="init entire project">
       <created>1675950231752</created>
@@ -107,7 +108,21 @@
       <option name="project" value="LOCAL" />
       <updated>1675957945671</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add rabbitmq installation and testing scripts">
+      <created>1676023128611</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1676023128611</updated>
+    </task>
+    <task id="LOCAL-00004" summary="improve script and add local domain automation">
+      <created>1676026134449</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1676026134450</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,6 +179,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init entire project" />
     <MESSAGE value="add rabbitmq" />
-    <option name="LAST_COMMIT_MESSAGE" value="add rabbitmq" />
+    <MESSAGE value="add rabbitmq installation and testing scripts" />
+    <MESSAGE value="improve script and add local domain automation" />
+    <option name="LAST_COMMIT_MESSAGE" value="improve script and add local domain automation" />
   </component>
 </project>

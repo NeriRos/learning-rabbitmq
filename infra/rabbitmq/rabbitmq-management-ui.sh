@@ -7,15 +7,15 @@ fi
 
 echo "Getting RabbitMQ management username and password for cluster: $1"
 
-if [ "$(kubectl rabbitmq version)" != "error*" ]; then
+username="$(kubectl get secret hello-world-default-user -o jsonpath='{.data.username}' | base64 --decode)"
+password="$(kubectl get secret hello-world-default-user -o jsonpath='{.data.password}' | base64 --decode)"
+
+echo "$username:$password" | pbcopy
+echo "The 'username:password' are in your clipboard: $username:$password"
+
+if ! (kubectl rabbitmq version | grep -q error); then
   kubectl rabbitmq manage "$1"
 else
-  username="$(kubectl get secret hello-world-default-user -o jsonpath='{.data.username}' | base64 --decode)"
-  password="$(kubectl get secret hello-world-default-user -o jsonpath='{.data.password}' | base64 --decode)"
-
-  echo "$username:$password" | pbcopy | echo "The 'username:password' are in your clipboard:
-  $username:$password"
-
   kubectl port-forward "service/$1" 15672 &
 
   pid=$!
