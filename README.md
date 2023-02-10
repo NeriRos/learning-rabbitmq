@@ -26,4 +26,4 @@ The goal is to experiment with RabbitMQ and Kubernetes.
 - [krew](https://krew.sigs.k8s.io/docs/user-guide/setup/install/) Installation
 - RabbitMQ command line installation `kubectl krew install rabbitmq`
 - RabbitMQ amqp library for js `npm install amqplib`
-- Access RabbitMQ management 
+- Access RabbitMQ management ui by running `./rabbitmq-management-ui.sh`

@@ -4,21 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4473be6f-0db8-4da4-b170-47c074e18193" name="Changes" comment="init entire project">
-      <change afterPath="$PROJECT_DIR$/.idea/kubernetes-settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/Develop_on_Kubernetes.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/publisher/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/infra/rabbitmq-management-ui.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="4473be6f-0db8-4da4-b170-47c074e18193" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/infra/init.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infra/rabbitmq/connect-application-test.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infra/k8s/rabbitmq-depl.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/infra/k8s/rabbitmq-depl.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infra/rabbitmq-management-ui.sh" beforeDir="false" afterPath="$PROJECT_DIR$/infra/rabbitmq/rabbitmq-management-ui.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/skaffold.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/skaffold.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,6 +32,7 @@
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="KubernetesApiPersistence">
+    <option name="allNamespaces" value="true" />
     <option name="context" value="docker-desktop" />
     <option name="namespace" value="default" />
   </component>
@@ -62,7 +54,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "com.google.cloudcode.ide_session_index": "20230209_0002",
+    "com.google.cloudcode.ide_session_index": "20230210_0001",
     "deletionFromPopupRequiresConfirmation": "false",
     "last_opened_file_path": "/Users/neri/WebstormProjects/rabbitmq-learning/infra/k8s",
     "node.js.detected.package.eslint": "true",
@@ -70,7 +62,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.intellij.kubernetes.view.ui.settings.KubernetesViewConfigurable",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -81,6 +73,7 @@
       <recent name="$PROJECT_DIR$/front" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/infra/rabbitmq" />
       <recent name="$PROJECT_DIR$/backend/publisher" />
       <recent name="$PROJECT_DIR$/infra" />
     </key>
@@ -97,7 +90,8 @@
       <workItem from="1675946680881" duration="213000" />
       <workItem from="1675946906016" duration="879000" />
       <workItem from="1675948238479" duration="2428000" />
-      <workItem from="1675952617725" duration="4939000" />
+      <workItem from="1675952617725" duration="10268000" />
+      <workItem from="1676018817591" duration="1991000" />
     </task>
     <task id="LOCAL-00001" summary="init entire project">
       <created>1675950231752</created>
@@ -106,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675950231753</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add rabbitmq">
+      <created>1675957945671</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1675957945671</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,6 +163,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init entire project" />
-    <option name="LAST_COMMIT_MESSAGE" value="init entire project" />
+    <MESSAGE value="add rabbitmq" />
+    <option name="LAST_COMMIT_MESSAGE" value="add rabbitmq" />
   </component>
 </project>

@@ -4,7 +4,6 @@ deploy:
   kubectl:
     manifests:
       - ./infra/k8s/*
-      - https://github.com/rabbitmq/cluster-operator/releases/latest/download/cluster-operator.yml
 build:
   local:
     push: false
