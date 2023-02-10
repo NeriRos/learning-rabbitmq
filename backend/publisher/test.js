@@ -1,8 +1,12 @@
 import amqp from 'amqplib'
 
+const host = `learning-rabbitmq.dev:5672`
+const url = `amqp://${host}/api/rabbit`
+console.log("Testing rabbitmq with this", url)
+
 const rabbitMQTest = {
     listen: () => {
-        amqp.connect("amqp://localhost", (error0, connection) => {
+        amqp.connect(url, (error0, connection) => {
             if (error0)
                 return error0
 
@@ -26,7 +30,7 @@ const rabbitMQTest = {
         })
     },
     send: () => {
-        amqp.connect("amqp://localhost", (error0, connection) => {
+        amqp.connect(url, (error0, connection) => {
             if (error0)
                 return error0
             console.log("Connected!")

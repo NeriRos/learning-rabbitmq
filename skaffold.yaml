@@ -24,5 +24,3 @@ build:
         manual:
           - src: '**/*.js'
             dest: .
-          - src: '*.js'
-            dest: .
