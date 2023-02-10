@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4473be6f-0db8-4da4-b170-47c074e18193" name="Changes" comment="node client demo working">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infra/k8s/rabbitmq-depl.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/infra/k8s/rabbitmq-depl.yaml" afterDir="false" />
+    <list default="true" id="4473be6f-0db8-4da4-b170-47c074e18193" name="Changes" comment="organize">
+      <change beforePath="$PROJECT_DIR$/backend/publisher/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/publisher/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infra/init.sh" beforeDir="false" afterPath="$PROJECT_DIR$/infra/init.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +52,7 @@
     "WebServerToolWindowFactoryState": "false",
     "com.google.cloudcode.ide_session_index": "20230210_0001",
     "deletionFromPopupRequiresConfirmation": "false",
-    "last_opened_file_path": "/Users/neri/WebstormProjects/rabbitmq-learning/infra",
+    "last_opened_file_path": "/Users/neri/WebstormProjects/rabbitmq-learning/infra/rabbitmq",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -65,6 +64,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/infra/rabbitmq" />
       <recent name="$PROJECT_DIR$/infra" />
       <recent name="$PROJECT_DIR$/infra/k8s" />
       <recent name="$PROJECT_DIR$/backend" />
@@ -122,7 +122,7 @@
       <workItem from="1675946906016" duration="879000" />
       <workItem from="1675948238479" duration="2428000" />
       <workItem from="1675952617725" duration="10268000" />
-      <workItem from="1676018817591" duration="14727000" />
+      <workItem from="1676018817591" duration="15244000" />
     </task>
     <task id="LOCAL-00001" summary="init entire project">
       <created>1675950231752</created>
@@ -173,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676047020397</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="organize">
+      <created>1676048813437</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1676048813437</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,6 +242,7 @@
     <MESSAGE value="add ingress deployment and improved init script to install ingress" />
     <MESSAGE value="watch file changes" />
     <MESSAGE value="node client demo working" />
-    <option name="LAST_COMMIT_MESSAGE" value="node client demo working" />
+    <MESSAGE value="organize" />
+    <option name="LAST_COMMIT_MESSAGE" value="organize" />
   </component>
 </project>

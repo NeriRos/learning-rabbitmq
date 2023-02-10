@@ -28,6 +28,7 @@ function installHelm() {
 }
 
 function installIngressNginx() {
+  echo "Installing Ingress Nginx"
   if kubectl get namespaces | grep ingress-nginx -q; then
     echo "Ingress Nginx is already installed"
   else
@@ -59,20 +60,20 @@ function installKrew() {
 }
 
 function installRabbitMQCommandLine() {
-  if kubectl scripts | grep -q error; then
+  if kubectl rabbitmq | grep -q error; then
     echo "Installing RabbitMQ Command Line"
-    kubectl krew install scripts
+    kubectl krew install rabbitmq
   else
     echo "RabbitMQ Command Line is already installed"
   fi
 }
 
 function installClusterOperator() {
-  if kubectl get all -n scripts-system | grep scripts-cluster-operator -q; then
+  if kubectl get all -n rabbitmq-system | grep rabbitmq-cluster-operator -q; then
     echo "RabbitMQ Cluster Operator is already installed"
   else
     echo "Installing RabbitMQ Cluster Operator"
-    kubectl scripts install-cluster-operator
+    kubectl rabbitmq install-cluster-operator
   fi
 }
 

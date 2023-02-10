@@ -3,15 +3,12 @@ kind: Config
 deploy:
   kubectl:
     manifests:
-      - ./infra/k8s/backend-depl.yaml
-#      - ./infra/k8s/front-depl.yaml
-      - ./infra/k8s/ingress-depl.yaml
-      - ./infra/k8s/scripts-depl.yaml
+      - ./infra/k8s/*
 build:
   local:
     push: false
   artifacts:
-#    - image: nericoder/learning-scripts/front
+#    - image: nericoder/learning-rabbitmq/front
 #      context: front
 #      docker:
 #        dockerfile: Dockerfile
@@ -19,7 +16,7 @@ build:
 #        manual:
 #          - src: 'src/**/*.js'
 #            dest: .
-    - image: nericoder/learning-scripts/backend
+    - image: nericoder/learning-rabbitmq/backend
       context: backend
       docker:
         dockerfile: Dockerfile
