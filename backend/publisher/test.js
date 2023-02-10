@@ -1,12 +1,12 @@
 import amqp from 'amqplib'
 
-const host = 'rabbitmq-instance' //`learning-rabbitmq.dev`
-const auth = 'default_user_Sy1olVywlDmRnlHArLI:8_rpRIb9WBY3ez7knAX1gZ_EaMuViu6m' //`learning-rabbitmq.dev`
-// const auth = 'guest:guest' //`learning-rabbitmq.dev`
+const host = 'scripts-instance' //`learning-scripts.dev`
+const auth = 'default_user_Sy1olVywlDmRnlHArLI:8_rpRIb9WBY3ez7knAX1gZ_EaMuViu6m' //`learning-scripts.dev`
+// const auth = 'guest:guest' //`learning-scripts.dev`
 const url = `amqp://${auth}@${host}`
 // const url = `amqp://${host}`
 
-console.log("Testing rabbitmq with this url %s", url)
+console.log("Testing scripts with this url %s", url)
 
 const rabbitMQTest = {
     test: async () => {

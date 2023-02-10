@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4473be6f-0db8-4da4-b170-47c074e18193" name="Changes" comment="watch file changes">
-      <change afterPath="$PROJECT_DIR$/infra/reset.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Develop_on_Kubernetes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Develop_on_Kubernetes.xml" afterDir="false" />
+    <list default="true" id="4473be6f-0db8-4da4-b170-47c074e18193" name="Changes" comment="node client demo working">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/publisher/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/publisher/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/infra/k8s/rabbitmq-depl.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/infra/k8s/rabbitmq-depl.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infra/rabbitmq/rabbitmq-management-ui.sh" beforeDir="false" afterPath="$PROJECT_DIR$/infra/rabbitmq/rabbitmq-management-ui.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skaffold.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/skaffold.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +122,7 @@
       <workItem from="1675946906016" duration="879000" />
       <workItem from="1675948238479" duration="2428000" />
       <workItem from="1675952617725" duration="10268000" />
-      <workItem from="1676018817591" duration="12904000" />
+      <workItem from="1676018817591" duration="14727000" />
     </task>
     <task id="LOCAL-00001" summary="init entire project">
       <created>1675950231752</created>
@@ -171,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676028629901</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="node client demo working">
+      <created>1676047020397</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1676047020397</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,6 +234,7 @@
     <MESSAGE value="improve script and add local domain automation" />
     <MESSAGE value="add ingress deployment and improved init script to install ingress" />
     <MESSAGE value="watch file changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="watch file changes" />
+    <MESSAGE value="node client demo working" />
+    <option name="LAST_COMMIT_MESSAGE" value="node client demo working" />
   </component>
 </project>

@@ -6,12 +6,12 @@ deploy:
       - ./infra/k8s/backend-depl.yaml
 #      - ./infra/k8s/front-depl.yaml
       - ./infra/k8s/ingress-depl.yaml
-      - ./infra/k8s/rabbitmq-depl.yaml
+      - ./infra/k8s/scripts-depl.yaml
 build:
   local:
     push: false
   artifacts:
-#    - image: nericoder/learning-rabbitmq/front
+#    - image: nericoder/learning-scripts/front
 #      context: front
 #      docker:
 #        dockerfile: Dockerfile
@@ -19,7 +19,7 @@ build:
 #        manual:
 #          - src: 'src/**/*.js'
 #            dest: .
-    - image: nericoder/learning-rabbitmq/backend
+    - image: nericoder/learning-scripts/backend
       context: backend
       docker:
         dockerfile: Dockerfile

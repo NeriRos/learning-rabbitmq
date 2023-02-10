@@ -15,8 +15,8 @@ password="$(kubectl get secret "$clusterId-default-user" -o jsonpath='{.data.pas
 echo "$username:$password" | pbcopy
 echo "The 'username:password' are in your clipboard: $username:$password"
 
-if ! (kubectl rabbitmq version | grep -q error); then
-  kubectl rabbitmq manage "$clusterId"
+if ! (kubectl scripts version | grep -q error); then
+  kubectl scripts manage "$clusterId"
 else
   kubectl port-forward "service/$clusterId" 15672 &
 

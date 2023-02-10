@@ -7,8 +7,8 @@ fi
 
 echo "Creating perf-test for cluster: $1"
 
-if ! (kubectl rabbitmq version | grep -q error); then
-  kubectl rabbitmq perf-test "$1"
+if ! (kubectl scripts version | grep -q error); then
+  kubectl scripts perf-test "$1"
 else
   username="$(kubectl get secret "$1-default-user" -o jsonpath='{.data.username}' | base64 --decode)"
   password="$(kubectl get secret "$1-default-user" -o jsonpath='{.data.password}' | base64 --decode)"

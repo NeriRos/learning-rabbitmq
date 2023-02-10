@@ -59,20 +59,20 @@ function installKrew() {
 }
 
 function installRabbitMQCommandLine() {
-  if kubectl rabbitmq | grep -q error; then
+  if kubectl scripts | grep -q error; then
     echo "Installing RabbitMQ Command Line"
-    kubectl krew install rabbitmq
+    kubectl krew install scripts
   else
     echo "RabbitMQ Command Line is already installed"
   fi
 }
 
 function installClusterOperator() {
-  if kubectl get all -n rabbitmq-system | grep rabbitmq-cluster-operator -q; then
+  if kubectl get all -n scripts-system | grep scripts-cluster-operator -q; then
     echo "RabbitMQ Cluster Operator is already installed"
   else
     echo "Installing RabbitMQ Cluster Operator"
-    kubectl rabbitmq install-cluster-operator
+    kubectl scripts install-cluster-operator
   fi
 }
 
