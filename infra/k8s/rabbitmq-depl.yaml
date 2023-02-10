@@ -1,4 +1,10 @@
 apiVersion: rabbitmq.com/v1beta1
 kind: RabbitmqCluster
 metadata:
-  name: hello-world
+  name: rabbitmq-instance
+spec:
+  rabbitmq:
+    additionalConfig: |
+      auth_mechanisms.1=PLAIN
+#      default_user=guest
+#      default_pass=guest

@@ -1,6 +1,5 @@
 import {rabbitMQTest} from './publisher/test.js'
 
-rabbitMQTest.listen()
-// rabbitMQTest.send()
+// rabbitMQTest.test()
 
 console.log("Running")
