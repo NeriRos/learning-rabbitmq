@@ -9,6 +9,11 @@
 
 The goal is to experiment with RabbitMQ and Kubernetes.
 
+### Problems
+
+1. [ ] RabbitMQ Username and password are regenerated everytime the cluster operator is deployed.
+   and defining a default username and password doesn't work.
+
 ### What I've done to set up the project
 
 #### Setup
@@ -22,8 +27,10 @@ The goal is to experiment with RabbitMQ and Kubernetes.
 7. Write script to open RabbitMQ management ui
 8. Write an Init file to install required prerequisites and define settings
 9. Add logging script
+10. Install HashiCorp Vault
 
 #### Development
+
 1. Install RabbitMQ amqp protocol for javascript `amqplib`
 
 ### Commands and resources

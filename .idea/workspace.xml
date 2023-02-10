@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4473be6f-0db8-4da4-b170-47c074e18193" name="Changes" comment="organize">
-      <change beforePath="$PROJECT_DIR$/backend/publisher/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/publisher/test.js" afterDir="false" />
+    <list default="true" id="4473be6f-0db8-4da4-b170-47c074e18193" name="Changes" comment="fix renaming rabbitmq to scripts">
+      <change afterPath="$PROJECT_DIR$/backend/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infra/scripts/env.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infra/scripts/rabbitmq-generate-cedentials.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/infra/init.sh" beforeDir="false" afterPath="$PROJECT_DIR$/infra/init.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infra/k8s/rabbitmq-depl.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/infra/k8s/rabbitmq-depl.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skaffold.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/skaffold.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +56,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "com.google.cloudcode.ide_session_index": "20230210_0001",
+    "com.google.cloudcode.ide_session_index": "20230210_0002",
     "deletionFromPopupRequiresConfirmation": "false",
     "last_opened_file_path": "/Users/neri/WebstormProjects/rabbitmq-learning/infra/rabbitmq",
     "node.js.detected.package.eslint": "true",
@@ -122,7 +128,7 @@
       <workItem from="1675946906016" duration="879000" />
       <workItem from="1675948238479" duration="2428000" />
       <workItem from="1675952617725" duration="10268000" />
-      <workItem from="1676018817591" duration="15244000" />
+      <workItem from="1676018817591" duration="17269000" />
     </task>
     <task id="LOCAL-00001" summary="init entire project">
       <created>1675950231752</created>
@@ -180,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676048813437</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="fix renaming rabbitmq to scripts">
+      <created>1676049149297</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1676049149297</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,6 +256,7 @@
     <MESSAGE value="watch file changes" />
     <MESSAGE value="node client demo working" />
     <MESSAGE value="organize" />
-    <option name="LAST_COMMIT_MESSAGE" value="organize" />
+    <MESSAGE value="fix renaming rabbitmq to scripts" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix renaming rabbitmq to scripts" />
   </component>
 </project>

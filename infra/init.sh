@@ -77,6 +77,15 @@ function installClusterOperator() {
   fi
 }
 
+function installHashiCorpVault() {
+  echo "Installing HashiCorp Vault"
+  helm repo add hashicorp https://helm.releases.hashicorp.com
+  helm install vault hashicorp/vault
+
+  echo "Enabling kubernetes auth using vault"
+  vault auth enable kubernetes
+}
+
 if [ $# -eq 0 ]; then
   echo "choose install or init"
   exit
@@ -88,6 +97,7 @@ if [ "$1" = "install" ]; then
   installKrew
   installRabbitMQCommandLine
   installClusterOperator
+#  installHashiCorpVault
 fi
 
 if [ "$1" = "init" ]; then
