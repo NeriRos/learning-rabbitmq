@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4473be6f-0db8-4da4-b170-47c074e18193" name="Changes" comment="">
+    <list default="true" id="4473be6f-0db8-4da4-b170-47c074e18193" name="Changes" comment="access env from default secret">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/.env" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/publisher/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/publisher/test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infra/init.sh" beforeDir="false" afterPath="$PROJECT_DIR$/infra/init.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/infra/k8s/backend-depl.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/infra/k8s/backend-depl.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infra/scripts/rabbitmq-generate-cedentials.sh" beforeDir="false" afterPath="$PROJECT_DIR$/infra/scripts/rabbitmq-generate-credentials.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skaffold.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/skaffold.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +50,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "com.google.cloudcode.ide_session_index": "20230211_0000",
+    "com.google.cloudcode.ide_session_index": "20230211_0001",
     "deletionFromPopupRequiresConfirmation": "false",
     "last_opened_file_path": "/Users/neri/WebstormProjects/rabbitmq-learning/infra/rabbitmq",
     "node.js.detected.package.eslint": "true",
@@ -130,7 +122,7 @@
       <workItem from="1675946906016" duration="879000" />
       <workItem from="1675948238479" duration="2428000" />
       <workItem from="1675952617725" duration="10268000" />
-      <workItem from="1676018817591" duration="28291000" />
+      <workItem from="1676018817591" duration="29145000" />
     </task>
     <task id="LOCAL-00001" summary="init entire project">
       <created>1675950231752</created>
@@ -202,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676051420858</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="access env from default secret">
+      <created>1676111265581</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1676111265581</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,6 +266,7 @@
     <MESSAGE value="organize" />
     <MESSAGE value="fix renaming rabbitmq to scripts" />
     <MESSAGE value="fix renaming rabbitmq to scripts and add env creation with regenerated creds" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix renaming rabbitmq to scripts and add env creation with regenerated creds" />
+    <MESSAGE value="access env from default secret" />
+    <option name="LAST_COMMIT_MESSAGE" value="access env from default secret" />
   </component>
 </project>

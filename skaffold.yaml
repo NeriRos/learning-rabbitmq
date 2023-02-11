@@ -8,14 +8,6 @@ build:
   local:
     push: false
   artifacts:
-    #    - image: nericoder/learning-rabbitmq/front
-    #      context: front
-    #      docker:
-    #        dockerfile: Dockerfile
-    #      sync:
-    #        manual:
-    #          - src: 'src/**/*.js'
-    #            dest: .
     - image: nericoder/learning-rabbitmq/backend
       context: backend
       docker:
