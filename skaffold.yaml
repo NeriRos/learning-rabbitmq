@@ -1,21 +1,21 @@
-apiVersion: skaffold/v2alpha3
+apiVersion: skaffold/v4beta2
 kind: Config
-deploy:
-  kubectl:
-    manifests:
-      - ./infra/k8s/*
+manifests:
+  rawYaml:
+    - ./infra/k8s/rabbitmq-depl.yaml
+    - ./infra/k8s/backend-depl.yaml
 build:
   local:
     push: false
   artifacts:
-    - image: nericoder/learning-rabbitmq/front
-      context: front
-      docker:
-        dockerfile: Dockerfile
-      sync:
-        manual:
-          - src: 'src/**/*.js'
-            dest: .
+    #    - image: nericoder/learning-rabbitmq/front
+    #      context: front
+    #      docker:
+    #        dockerfile: Dockerfile
+    #      sync:
+    #        manual:
+    #          - src: 'src/**/*.js'
+    #            dest: .
     - image: nericoder/learning-rabbitmq/backend
       context: backend
       docker:

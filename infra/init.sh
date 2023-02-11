@@ -86,6 +86,10 @@ function installHashiCorpVault() {
   vault auth enable kubernetes
 }
 
+function installK9s() {
+  brew install derailed/k9s/k9s
+}
+
 if [ $# -eq 0 ]; then
   echo "choose install or init"
   exit
@@ -98,6 +102,10 @@ if [ "$1" = "install" ]; then
   installRabbitMQCommandLine
   installClusterOperator
 #  installHashiCorpVault
+fi
+
+if [ "$1" = "install-dev" ]; then
+  installK9s
 fi
 
 if [ "$1" = "init" ]; then

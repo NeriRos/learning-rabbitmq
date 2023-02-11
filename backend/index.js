@@ -1,5 +1,5 @@
 import {rabbitMQTest} from './publisher/test.js'
 
-rabbitMQTest.test()
+rabbitMQTest()
 
 console.log("Running")

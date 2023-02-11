@@ -1,62 +1,61 @@
 import amqp from 'amqplib'
 
-const host = 'rabbitmq-instance'
-const username = process.env.RABBITMQ_USERNAME;
-const password = process.env.RABBITMQ_PASSWORD;
-const url = `amqp://${username}:${password}@${host}`
 
-console.log("Testing rabbitmq with this url %s", url)
+const rabbitMQTest = async () => {
+    const host = process.env.RABBITMQ_HOST
+    const username = process.env.RABBITMQ_USERNAME;
+    const password = process.env.RABBITMQ_PASSWORD;
+    const url = `amqp://${username}:${password}@${host}`
 
-const rabbitMQTest = {
-    test: async () => {
-        const queue = 'tasks';
-        const conn = await amqp.connect(url);
+    console.log("Testing rabbitmq with this url %s", url)
 
-        const ch1 = await conn.createChannel();
-        await ch1.assertQueue(queue);
+    const queue = 'tasks';
+    const conn = await amqp.connect(url);
 
-        // Listener
-        ch1.consume(queue, (msg) => {
-            if (msg !== null) {
-                console.log('Received:', msg.content.toString());
-                ch1.ack(msg);
-            } else {
-                console.log('Consumer cancelled by server');
-            }
-        });
+    const ch1 = await conn.createChannel();
+    await ch1.assertQueue(queue);
 
-        // Sender
-        const ch2 = await conn.createChannel();
+    // Listener
+    ch1.consume(queue, (msg) => {
+        if (msg !== null) {
+            console.log('Received:', msg.content.toString());
+            ch1.ack(msg);
+        } else {
+            console.log('Consumer cancelled by server');
+        }
+    });
 
-        setInterval(() => {
-            ch2.sendToQueue(queue, Buffer.from('something to do'));
-        }, 1000);
+    // Sender
+    const ch2 = await conn.createChannel();
 
-        amqp.connect(url, (error0, connection) => {
-            if (error0)
-                return error0
-            console.log("Connected!")
+    setInterval(() => {
+        ch2.sendToQueue(queue, Buffer.from('something to do'));
+    }, 1000);
 
-            connection.createChannel((error1, channel) => {
-                if (error1)
-                    return error1
+    amqp.connect(url, (error0, connection) => {
+        if (error0)
+            return error0
+        console.log("Connected!")
 
-                let queue = 'testqueue'
+        connection.createChannel((error1, channel) => {
+            if (error1)
+                return error1
 
-                channel.assertQueue(queue, {
-                    durable: false
-                })
+            let queue = 'testqueue'
 
-                channel.sendToQueue(queue, Buffer.from('TESTTTT'))
-
-                console.log("SENT!")
+            channel.assertQueue(queue, {
+                durable: false
             })
 
-            process.on('exit', () => connection.disconnect())
+            channel.sendToQueue(queue, Buffer.from('TESTTTT'))
+
+            console.log("SENT!")
         })
 
-        process.on('exit', () => conn.disconnect())
-    }
+        process.on('exit', () => connection.disconnect())
+    })
+
+    process.on('exit', () => conn.disconnect())
 }
 
 export {rabbitMQTest}

@@ -15,6 +15,22 @@ spec:
       containers:
         - name: backend
           image: nericoder/learning-rabbitmq/backend
+          env:
+            - name: RABBITMQ_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  key: username
+                  name: rabbitmq-instance-default-user
+            - name: RABBITMQ_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  key: password
+                  name: rabbitmq-instance-default-user
+            - name: RABBITMQ_HOST
+              valueFrom:
+                secretKeyRef:
+                  key: host
+                  name: rabbitmq-instance-default-user
 ---
 apiVersion: v1
 kind: Service
